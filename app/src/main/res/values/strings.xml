@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">listenUpMerchant</string>
+    <string name="home_login_bt_text">login</string>
+    <string name="home_sign_up_bt_text">sign up</string>
+    <string name="dashboard_add_product_bt_text">Add Product</string>
+    <string name="stock_card_update_bt_text">Update</string>
+    <array name="spinner_items">
+        <item>yes</item>
+        <item>no</item>
+    </array>
+</resources>

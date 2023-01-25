@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MerchantAddProduct">
+
+    <EditText
+        android:id="@+id/et_add_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Product Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/et_add_product_brand"
+        app:layout_constraintEnd_toEndOf="@id/guideline17"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_add_product_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Product Brand"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/et_add_product_image_url"
+        app:layout_constraintEnd_toEndOf="@id/guideline17"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_add_product_name" />
+
+    <EditText
+        android:id="@+id/et_add_product_image_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Image URL"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/et_add_product_description"
+        app:layout_constraintEnd_toEndOf="@id/guideline17"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_add_product_brand" />
+
+    <EditText
+        android:id="@+id/et_add_product_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Product Description"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline17"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_add_product_image_url" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <RadioGroup
+        android:id="@+id/rg_add_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/guideline16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
+        app:layout_constraintTop_toBottomOf="@id/guideline20">
+
+        <RadioButton
+            android:id="@+id/rb_add_product_speaker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Speakers" />
+
+        <RadioButton
+            android:id="@+id/rb_add_product_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Radio" />
+
+        <RadioButton
+            android:id="@+id/rb_add_product_wired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wired" />
+
+        <RadioButton
+            android:id="@+id/rb_add_product_not_Wired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wireless" />
+
+        <RadioButton
+            android:id="@+id/rb_add_product_soundbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Soundbar" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/sp_add_product_high_bass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/spinner_items"
+        app:layout_constraintBottom_toTopOf="@+id/sp_add_product_aptx"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toBottomOf="@id/guideline16" />
+
+    <TextView
+        android:id="@+id/tv_add_product_high_bass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High Bass"
+        app:layout_constraintBottom_toTopOf="@+id/tv_add_product_aptx"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
+        app:layout_constraintTop_toBottomOf="@id/guideline16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <TextView
+        android:id="@+id/tv_add_product_aptx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AptX"
+        app:layout_constraintBottom_toTopOf="@+id/tv_add_product_water"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_product_high_bass" />
+
+    <Spinner
+        android:id="@+id/sp_add_product_aptx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/spinner_items"
+        app:layout_constraintBottom_toTopOf="@+id/sp_add_product_water"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toBottomOf="@+id/sp_add_product_high_bass" />
+
+    <TextView
+        android:id="@+id/tv_add_product_water"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Water Resistant"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_product_aptx" />
+
+    <Spinner
+        android:id="@+id/sp_add_product_water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/spinner_items"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toBottomOf="@+id/sp_add_product_aptx" />
+
+    <TextView
+        android:id="@+id/tv_add_product_select_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Category"
+        app:layout_constraintBottom_toTopOf="@+id/rg_add_product"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_add_product_enter_features"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Additional Features"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
+        app:layout_constraintTop_toTopOf="@+id/guideline16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <Button
+        android:id="@+id/bt_add_product_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Product"
+        android:background="@drawable/roundedbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_add_product_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
