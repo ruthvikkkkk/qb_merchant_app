@@ -19,8 +19,11 @@ public class DashboardStockAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     List<Stock> merchantStock;
 
-    public DashboardStockAdapter(List<Stock> merchantStock){
+    IDashboardCommunicator dashboardCommunicator;
+
+    public DashboardStockAdapter(List<Stock> merchantStock, IDashboardCommunicator communicator){
         this.merchantStock = merchantStock;
+        this.dashboardCommunicator = communicator;
     }
 
     @NonNull
@@ -47,6 +50,12 @@ public class DashboardStockAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         public StockViewHolder(@NonNull View itemView) {
             super(itemView);
             view = itemView;
+            view.findViewById(R.id.bt_stock_card_update).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dashboardCommunicator.updateStock(merchantStock.get(getAdapterPosition()));
+                }
+            });
         }
 
         public void stockBind(Stock stock){
@@ -55,5 +64,9 @@ public class DashboardStockAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             ((TextView) view.findViewById(R.id.stock_card_qty)).setText(String.valueOf(stock.getQuantity()));
             Glide.with(view.getContext()).load(stock.getImage()).into(((ImageView) view.findViewById(R.id.stock_card_image)));
         }
+    }
+
+    public interface IDashboardCommunicator{
+        void updateStock(Stock stock);
     }
 }

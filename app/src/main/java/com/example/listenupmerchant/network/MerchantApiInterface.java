@@ -5,6 +5,7 @@ import com.example.listenupmerchant.models.MerchantSignInModel;
 import com.example.listenupmerchant.models.MerchantSignUpModel;
 import com.example.listenupmerchant.models.ProductDto;
 import com.example.listenupmerchant.models.Stock;
+import com.example.listenupmerchant.models.StockUpdateDto;
 
 import java.util.List;
 
@@ -29,4 +30,7 @@ public interface MerchantApiInterface {
 
     @POST("stock/addProduct/{merchantId}")
     Call<Stock> addProduct(@Path("merchantId") String merchantId, @Body ProductDto productDto);
+
+    @POST("stock/updateStock/{skuId}")
+    Call<Stock> updateStock(@Path("skuId") String skuId, @Body StockUpdateDto stockUpdateDto);
 }
