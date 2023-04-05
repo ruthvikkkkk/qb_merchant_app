@@ -1,5 +1,6 @@
 package com.example.listenupmerchant.network;
 
+import com.example.listenupmerchant.models.Merchant;
 import com.example.listenupmerchant.models.MerchantGet;
 import com.example.listenupmerchant.models.MerchantSignInModel;
 import com.example.listenupmerchant.models.MerchantSignUpModel;
@@ -23,7 +24,7 @@ public interface MerchantApiInterface {
     Call<Integer> signUp(@Body MerchantSignUpModel merchantSignUp);
 
     @GET("merchant/getByEmail/{email}")
-    Call<MerchantGet> getByEmail(@Path("email") String email);
+    Call<Merchant> getByEmail(@Path("email") String email);
 
     @GET("stock/viewProducts/{merchantId}")
     Call<List<Stock>> getAll(@Path("merchantId") String merchantId);

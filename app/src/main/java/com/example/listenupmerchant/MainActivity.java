@@ -3,6 +3,7 @@ package com.example.listenupmerchant;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
                 MerchantSignInModel merchantSignIn = new MerchantSignInModel();
                 merchantSignIn.setEmail(email);
                 merchantSignIn.setPassword(password);
+
+                SharedPreferences sharedPreferences = getSharedPreferences("merchant", MODE_PRIVATE);
                 merchantApiInterface.signIn(merchantSignIn).enqueue(new Callback<Integer>() {
                     @Override
                     public void onResponse(Call<Integer> call, Response<Integer> response) {

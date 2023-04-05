@@ -2,7 +2,9 @@ package com.example.listenupmerchant.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Merchant{
+import java.io.Serializable;
+
+public class Merchant implements Serializable {
 
 	@SerializedName("address")
 	private String address;

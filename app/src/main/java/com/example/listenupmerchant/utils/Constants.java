@@ -1,5 +1,5 @@
 package com.example.listenupmerchant.utils;
 
 public class Constants {
-    public final static String HOST = "http://10.20.2.188:8081/";
+    public final static String HOST = "http://10.20.5.8:8090/";
 }

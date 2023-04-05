@@ -11,6 +11,8 @@ public class MyApplication extends Application {
 
     Retrofit retrofit;
 
+    static String merchantId = "";
+
     @Override
     public void onCreate() {
         super.onCreate();
